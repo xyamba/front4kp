@@ -1,0 +1,565 @@
+.app {
+    min-height: 100vh;
+    background: #f5f7fa;
+}
+
+.app-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.app-content {
+    min-height: calc(100vh - 64px);
+    padding: 20px 0;
+}
+
+
+/* Dashboard styles */
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+    margin-top: 24px;
+}
+
+.stats-card {
+    background: white;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stats-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.stats-card h3 {
+    color: #666;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.stats-card .value {
+    font-size: 48px;
+    font-weight: 700;
+    color: #333;
+    line-height: 1;
+}
+
+
+/* Technology cards */
+
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 20px;
+    margin-top: 24px;
+}
+
+.tech-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    border: 1px solid #eaeaea;
+}
+
+.tech-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.tech-card-content {
+    padding: 20px;
+}
+
+.tech-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 16px;
+}
+
+.tech-card-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+}
+
+.tech-card-description {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+
+.tech-card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.tag {
+    padding: 4px 12px;
+    border-radius: 16px;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.tag.frontend {
+    background: #e3f2fd;
+    color: #1976d2;
+}
+
+.tag.backend {
+    background: #f3e5f5;
+    color: #7b1fa2;
+}
+
+.tag.database {
+    background: #e8f5e9;
+    color: #388e3c;
+}
+
+.tag.styling {
+    background: #fff3e0;
+    color: #f57c00;
+}
+
+.tag.state-management {
+    background: #fce4ec;
+    color: #c2185b;
+}
+
+.tech-card-actions {
+    display: flex;
+    gap: 12px;
+    padding: 16px 20px;
+    background: #fafafa;
+    border-top: 1px solid #eee;
+}
+
+
+/* Forms */
+
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 12px;
+    padding: 32px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.form-title {
+    color: #333;
+    margin-bottom: 32px;
+    font-weight: 600;
+}
+
+.form-group {
+    margin-bottom: 24px;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.form-label.required::after {
+    content: ' *';
+    color: #f44336;
+}
+
+.form-input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: inherit;
+    transition: border-color 0.3s ease;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.form-input.error {
+    border-color: #f44336;
+    background-color: #fff5f5;
+}
+
+.error-message {
+    color: #f44336;
+    font-size: 12px;
+    margin-top: 4px;
+    display: block;
+}
+
+.form-actions {
+    display: flex;
+    gap: 16px;
+    margin-top: 32px;
+}
+
+.btn {
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 16px;
+    border: none;
+    transition: all 0.3s ease;
+    flex: 1;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.btn-primary:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.3);
+}
+
+.btn-primary:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.btn-secondary {
+    background: white;
+    color: #666;
+    border: 1px solid #ddd;
+}
+
+.btn-secondary:hover {
+    background: #f5f7fa;
+    border-color: #667eea;
+}
+
+
+/* Search and filter */
+
+.search-container {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.search-input {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.search-icon {
+    color: #999;
+}
+
+.filter-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 16px;
+}
+
+.filter-chip {
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+.filter-chip:hover {
+    border-color: #667eea;
+    color: #667eea;
+}
+
+.filter-chip.active {
+    background: #667eea;
+    color: white;
+    border-color: #667eea;
+}
+
+
+/* Status indicators */
+
+.status-indicator {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.status-indicator.completed {
+    background: #e8f5e9;
+    color: #388e3c;
+}
+
+.status-indicator.in-progress {
+    background: #fff3e0;
+    color: #f57c00;
+}
+
+.status-indicator.not-started {
+    background: #f5f5f5;
+    color: #666;
+}
+
+
+/* Progress bars */
+
+.progress-container {
+    margin: 32px 0;
+}
+
+.progress-label {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    color: #666;
+    font-size: 14px;
+}
+
+.progress-bar {
+    height: 8px;
+    background: #eee;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+    border-radius: 4px;
+    transition: width 0.5s ease;
+}
+
+
+/* Empty state */
+
+.empty-state {
+    text-align: center;
+    padding: 64px 20px;
+    color: #999;
+}
+
+.empty-state-icon {
+    font-size: 64px;
+    margin-bottom: 16px;
+    opacity: 0.3;
+}
+
+.empty-state-title {
+    font-size: 20px;
+    margin-bottom: 8px;
+    color: #666;
+}
+
+.empty-state-description {
+    color: #999;
+}
+
+
+/* Responsive design */
+
+@media (max-width: 768px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+    .tech-grid {
+        grid-template-columns: 1fr;
+    }
+    .form-container {
+        padding: 20px;
+        margin: 0 16px;
+    }
+    .form-actions {
+        flex-direction: column;
+    }
+    .stats-card .value {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 480px) {
+    .tech-card-actions {
+        flex-direction: column;
+    }
+    .tech-card-tags {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+
+/* CSS переменные для светлой темы */
+
+:root {
+    --bg-primary: #f5f7fa;
+    --bg-secondary: #ffffff;
+    --text-primary: #1a202c;
+    --text-secondary: #718096;
+    --border-color: #e2e8f0;
+    --card-shadow: 0px 4px 15px rgba(0, 0, 0, 0.05);
+    --card-shadow-hover: 0px 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+
+/* CSS переменные для темной темы */
+
+[data-theme="dark"] {
+    --bg-primary: #0f172a;
+    --bg-secondary: #1e293b;
+    --text-primary: #f7fafc;
+    --text-secondary: #a0aec0;
+    --border-color: #2d3748;
+    --card-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    --card-shadow-hover: 0px 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.app {
+    min-height: 100vh;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.app-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+
+/* Обновляем остальные стили для поддержки темы */
+
+.stats-card {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--card-shadow);
+}
+
+.stats-card:hover {
+    box-shadow: var(--card-shadow-hover);
+}
+
+.tech-card {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--card-shadow);
+}
+
+.tech-card:hover {
+    box-shadow: var(--card-shadow-hover);
+}
+
+.tech-card-title {
+    color: var(--text-primary);
+}
+
+.tech-card-description {
+    color: var(--text-secondary);
+}
+
+.form-container {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--card-shadow);
+}
+
+.form-title {
+    color: var(--text-primary);
+}
+
+.form-label {
+    color: var(--text-primary);
+}
+
+.form-input {
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    border-color: var(--border-color);
+}
+
+.form-input:focus {
+    border-color: #667eea;
+}
+
+.search-container {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--card-shadow);
+}
+
+.filter-chip {
+    background: var(--bg-secondary);
+    border-color: var(--border-color);
+    color: var(--text-primary);
+}
+
+.filter-chip:hover {
+    border-color: #667eea;
+}
+
+.filter-chip.active {
+    background: #667eea;
+    color: white;
+}
+
+
+/* Темная тема для прогресс-бара */
+
+[data-theme="dark"] .progress-bar {
+    background: #2d3748;
+}
+
+[data-theme="dark"] .tech-card-actions {
+    background: #0f172a;
+    border-top-color: #2d3748;
+}
+
+[data-theme="dark"] .btn-secondary {
+    background: #1e293b;
+    border-color: #4a5568;
+    color: #cbd5e0;
+}
+
+[data-theme="dark"] .btn-secondary:hover {
+    background: #2d3748;
+    border-color: #667eea;
+}
