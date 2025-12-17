@@ -1,6 +1,7 @@
 {
     "name": "prac25-26",
     "private": true,
+    "homepage": "https://xyamba.github.io",
     "version": "0.0.0",
     "type": "module",
     "scripts": {
